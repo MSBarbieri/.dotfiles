@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-alias vim=$EDITOR
-alias nvim=$EDITOR
-alias vi=$EDITOR
+alias vim="lvim"
+alias nvim="lvim"
+alias vi="lvim"
 alias ls="exa --icons"
 alias bat="bat --color=auto"
 alias cat="bat"
