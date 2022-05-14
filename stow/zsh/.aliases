@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+alias vim=$EDITOR
+alias nvim=$EDITOR
+alias vi=$EDITOR
+alias ls="exa --icons"
+alias bat="bat --color=auto"
+alias cat="bat"

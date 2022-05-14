@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+export VIM="lvim"
+export EDITOR=$VIM
+export BROWSER="brave-browser"
