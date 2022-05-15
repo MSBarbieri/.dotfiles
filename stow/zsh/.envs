@@ -1,3 +1,16 @@
 #!/usr/bin/env zsh
 
 export BROWSER="brave-browser"
+export GOPATH=$HOME/.local/bin/go/
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+# PATHS
+addToPath $HOME/.local/bin
+addToPath $HOME/.local/scripts/
+addToPath $HOME/.local/bin/go/bin
+addToPath /usr/local/go/bin

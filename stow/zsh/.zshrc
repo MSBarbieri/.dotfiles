@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="lukerandall"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,23 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-# PATHS
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.local/scripts/:$PATH
-export PATH=$HOME/.local/bin/go/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+source $HOME/.zsh_profile
+
+
 . "$HOME/.cargo/env"
 . "$HOME/.envs"
 . "$HOME/.aliases"
-export GOPATH=$HOME/.local/bin/go
-
-
-# # ALIASES
-# alias bat="bat --color=auto"
-# alias nvim="lvim"
-# alias ls="exa --icons"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
