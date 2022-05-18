@@ -1,3 +1,6 @@
 [submodule "stow/rofi/.config/rofi"]
 	path = stow/rofi/.config/rofi
 	url = https://github.com/MSBarbieri/Rofi-scripts
+[submodule "stow/scripts/.local/scripts"]
+	path = stow/scripts/.local/scripts
+	url = https://github.com/MSBarbieri/personal-scripts

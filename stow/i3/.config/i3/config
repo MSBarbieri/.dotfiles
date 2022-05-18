@@ -29,7 +29,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # exec --no-startup-id nm-applet
-client.focused #444444 #87FFAF #444444 #444444  
+client.focused #444444 #444444 #444444 #444444  
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -196,15 +196,16 @@ bindsym $mod+r mode "resize"
 #************  On Start  ***************************
 # change caps to escape
 exec xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id start_picom
+exec --no-startup-id start_bar 
 
 #************  Apps Shortcut ***********************
 bindsym $mod+b exec --no-startup-id brave-browser
 
 #************  Gaps  *******************************
 
-gaps outer 9
-gaps inner 3
+gaps outer 0
+gaps inner 0
 
 #************  Other settings  *********************
 
