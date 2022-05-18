@@ -191,5 +191,5 @@ lvim.plugins = {
 --  tokyonight
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_transparent = true
-lvim.colorscheme = "tokyonight"
-lvim.builtin.lualine.options.theme = "tokyonight"
+lvim.colorscheme = "onedarker"
+lvim.builtin.lualine.options.theme = "onedarker"
