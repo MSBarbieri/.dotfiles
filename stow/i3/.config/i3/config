@@ -195,6 +195,7 @@ bindsym $mod+r mode "resize"
 exec xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 exec --no-startup-id $HOME/.local/scripts/start_picom
 exec --no-startup-id $HOME/.local/scripts/start_bar 
+exec --no-startup-id $HOME/.local/scripts/background
 
 #************  Apps Shortcut ***********************
 # start browser

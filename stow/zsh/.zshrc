@@ -108,5 +108,3 @@ source $HOME/.zsh_profile
 . "$HOME/.envs"
 . "$HOME/.aliases"
 
-
-[ -f "/home/fumassa/.ghcup/env" ] && source "/home/fumassa/.ghcup/env" # ghcup-env
