@@ -196,15 +196,15 @@ bindsym $mod+r mode "resize"
 #************  On Start  ***************************
 # change caps to escape
 exec xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-exec --no-startup-id start_picom
-exec --no-startup-id start_bar 
+exec --no-startup-id $HOME/.local/scripts/start_picom
+exec --no-startup-id $HOME/.local/scripts/start_bar 
 
 #************  Apps Shortcut ***********************
 bindsym $mod+b exec --no-startup-id brave-browser
 
 #************  Gaps  *******************************
 
-gaps outer 0
+gaps outer 5
 gaps inner 0
 
 #************  Other settings  *********************

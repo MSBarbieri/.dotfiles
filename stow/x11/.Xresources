@@ -1,0 +1,38 @@
+! TODO
+  
+! DOOM-ONE
+ *foreground:   #bfbfbf
+ *background:   #282c34
+ *color0:       #5b6268
+ *color8:       #3f444a
+ *color1:       #ff6c6b
+ *color9:       #ff6c6b
+ *color2:       #98be65
+ *color10:      #98be65
+ *color3:       #da8548
+ *color11:      #da8548
+ *color4:       #51afef
+ *color12:      #51afef
+ *color5:       #c678dd
+ *color13:      #c678dd
+ *color6:       #a9a1e1
+ *color14:      #a9a1e1
+ *color7:       #DFDFDF
+ *color15:      #ffffff
+
+! For Xft.dpi, using integer multiples of 96 usually works best, e.g. 192 
+! for 200% scaling (athough for a chad like me, this is largely a suggestion)
+! see: https://wiki.archlinux.org/index.php/HiDPI#X_Resources
+Xft.antialias:  true
+Xft.autohint:   true
+
+XTerm.termName: xterm-256colors
+XTerm.vt100.locale: true
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+XTerm.vt100.scrollBar: false
+XTerm.vt100.reverseVideo: true
+
+
+xterm*color0: #ffffff

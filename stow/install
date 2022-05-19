@@ -1,2 +1,2 @@
 #!/bin/bash
-stow -vt ~ alacritty fonts git i3 local lvim picom rofi tmux wallpapers zsh polybar dunst scripts
+stow -vt ~ alacritty fonts git i3 local lvim picom rofi tmux wallpapers zsh polybar dunst scripts x11
