@@ -1,0 +1,10 @@
+[alias]
+b = "build"
+a = "add"
+t = "test"
+r = "run"
+br = "build --release"
+rr = "run --release"
+
+[doc]
+browser = "chromium"
