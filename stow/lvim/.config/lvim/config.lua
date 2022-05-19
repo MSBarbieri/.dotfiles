@@ -77,9 +77,10 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "haskell"
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+-- lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
@@ -141,12 +142,11 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-    {"folke/tokyonight.nvim"},
-
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
+  { "folke/tokyonight.nvim" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
   {
     "simrat39/rust-tools.nvim",
     config = function()
@@ -158,38 +158,35 @@ lvim.plugins = {
             use_telescope = true,
           },
           inlay_hints = {
-    			  only_current_line = false,
-      			only_current_line_autocmd = "CursorHold",
-      			show_parameter_hints = true,
-      			show_variable_name = false,
-      			parameter_hints_prefix = "<- ",
-      			other_hints_prefix = "=> ",
-      			max_len_align = false,
-      			max_len_align_padding = 1,
-      			right_align = false,
-      			right_align_padding = 7,
-      			highlight = "Comment",
-      		},
+            only_current_line = false,
+            only_current_line_autocmd = "CursorHold",
+            show_parameter_hints = true,
+            show_variable_name = false,
+            parameter_hints_prefix = "<- ",
+            other_hints_prefix = "=> ",
+            max_len_align = false,
+            max_len_align_padding = 1,
+            right_align = false,
+            right_align_padding = 7,
+            highlight = "Comment",
+          },
         },
         server = {
           cmd = { vim.fn.stdpath "data" .. "/lsp_servers/rust/rust-analyzer" },
           on_attach = require("lvim.lsp").common_on_attach,
           on_init = require("lvim.lsp").common_on_init,
         },
-        })
+      })
     end,
     ft = { "rust", "rs" },
   },
 }
 
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
-
-
 --  tokyonight
 vim.g.tokyonight_style = "night"
+vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
-lvim.colorscheme = "onedarker"
-lvim.builtin.lualine.options.theme = "onedarker"
+lvim.colorscheme = "tokyonight"
+lvim.builtin.lualine.options.theme = "tokyonight"
+lvim.builtin.gitsigns.opts.numhl = true
+lvim.builtin.gitsigns.opts.current_line_blame = true

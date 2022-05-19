@@ -46,9 +46,6 @@ bindsym XF86AudioPrev exec playerctl previous -p spotify
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec alacritty
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -200,7 +197,11 @@ exec --no-startup-id $HOME/.local/scripts/start_picom
 exec --no-startup-id $HOME/.local/scripts/start_bar 
 
 #************  Apps Shortcut ***********************
+# start browser
 bindsym $mod+b exec --no-startup-id brave-browser
+
+# start a terminal
+bindsym $mod+Return exec alacritty -e "tmux"
 
 #************  Gaps  *******************************
 
