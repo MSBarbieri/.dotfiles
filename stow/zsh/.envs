@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 export BROWSER="brave-browser"
-export GOPATH=$HOME/.local/bin/go/
+export GOPATH=$HOME/programming_languages/go/
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
