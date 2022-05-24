@@ -25,3 +25,8 @@
 
 [init]
   defaultBranch = main
+
+[alias]
+  wa = worktree add
+  wl = worktree list
+  bc = clone --bare

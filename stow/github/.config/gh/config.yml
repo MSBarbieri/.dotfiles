@@ -9,7 +9,7 @@ pager: less
 # Aliases allow you to create nicknames for gh commands
 aliases:
     co: pr checkout
-    clone: 'repo clone $1 $1 -- --bare'
+    clone: 'repo clone $1 $1 -- --bare --recurse-submodules -j8'
     homework: issue list --assignee @me
     open: browse
 # The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
