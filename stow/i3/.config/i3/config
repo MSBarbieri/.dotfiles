@@ -194,7 +194,7 @@ bindsym $mod+r mode "resize"
 # change caps to escape
 exec setxkbmap -layout us -option "caps:swapescape,grp:sclk_toggle"
 exec --no-startup-id $HOME/.local/scripts/start_picom
-exec --no-startup-id $HOME/.local/scripts/start_bar 
+#exec --no-startup-id $HOME/.local/scripts/start_bar 
 exec --no-startup-id $HOME/.local/scripts/background
 
 #************  Apps Shortcut ***********************
@@ -203,7 +203,7 @@ bindsym $mod+b exec --no-startup-id brave-browser
 bindsym --release $mod+x exec --no-startup-id rofi -lines 10 -padding 0 -show search -modi search:$HOME/.local/scripts/rofi-search -i -p "Search: "
 
 # start a terminal
-bindsym $mod+Return exec alacritty -e "tmux"
+bindsym $mod+Return exec alacritty -e $HOME/.local/bin/tmux-sessionizer $HOME
 
 
 #************  Gaps  *******************************
