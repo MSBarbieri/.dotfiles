@@ -192,7 +192,7 @@ bindsym $mod+r mode "resize"
 
 #************  On Start  ***************************
 # change caps to escape
-exec xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+exec setxkbmap -layout us -option "caps:swapescape,grp:sclk_toggle"
 exec --no-startup-id $HOME/.local/scripts/start_picom
 exec --no-startup-id $HOME/.local/scripts/start_bar 
 exec --no-startup-id $HOME/.local/scripts/background
@@ -200,9 +200,11 @@ exec --no-startup-id $HOME/.local/scripts/background
 #************  Apps Shortcut ***********************
 # start browser
 bindsym $mod+b exec --no-startup-id brave-browser
+bindsym --release $mod+x exec --no-startup-id rofi -lines 10 -padding 0 -show search -modi search:$HOME/.local/scripts/rofi-search -i -p "Search: "
 
 # start a terminal
 bindsym $mod+Return exec alacritty -e "tmux"
+
 
 #************  Gaps  *******************************
 
@@ -212,7 +214,7 @@ gaps inner 0
 #************  Other settings  *********************
 
 # Set per-application border
-for_window [class=".*"] border pixel 1
+# for_window [class=".*"] border pixel 1
 
 # Enable or disable floating
 # for_window [class="Lxappearance"] floating enable

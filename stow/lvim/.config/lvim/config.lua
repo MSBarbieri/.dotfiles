@@ -93,6 +93,7 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  { "wellle/context.vim" },
   {
     "simrat39/rust-tools.nvim",
     config = function()
@@ -135,6 +136,4 @@ lvim.colorscheme = "onedarker"
 lvim.builtin.lualine.options.theme = "onedarker"
 lvim.builtin.gitsigns.opts.numhl = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
-
-
--- LSP Haskell
+lvim.builtin.autopairs.active = false
