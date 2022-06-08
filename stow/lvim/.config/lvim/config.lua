@@ -136,4 +136,3 @@ lvim.colorscheme = "onedarker"
 lvim.builtin.lualine.options.theme = "onedarker"
 lvim.builtin.gitsigns.opts.numhl = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
-lvim.builtin.autopairs.active = false

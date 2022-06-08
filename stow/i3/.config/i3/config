@@ -204,7 +204,8 @@ bindsym --release $mod+x exec --no-startup-id rofi -lines 10 -padding 0 -show se
 
 # start a terminal
 bindsym $mod+Return exec alacritty -e $HOME/.local/bin/tmux-sessionizer $HOME
-
+bindsym $mod+F10 exec setxkbmap -layout us -variant dvp -option "caps:swapescape"
+bindsym $mod+F11 exec setxkbmap -layout us -option "caps:swapescape"
 
 #************  Gaps  *******************************
 
