@@ -13,14 +13,17 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 sessions=$(tmux ls | awk '{split($1,a,":");print a[1]}')
-
-if [[ $sessions != *$selected_name* ]]; then
+if [[ -z $TMUX ]] && [[ $sessions != *$selected_name* ]]; then
     tmux new-session -s $selected_name -c $selected
     exit 0
 fi
 
 if [[ -z $TMUX ]] && [[ -n $tmux_running ]]; then
     tmux attach-session -t $selected_name
+    exit 0
+fi
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $selected
     exit 0
 fi
 
