@@ -94,6 +94,7 @@ lvim.plugins = {
     cmd = "TroubleToggle",
   },
   { "wellle/context.vim" },
+  { "dbeniamine/cheat.sh-vim" },
   {
     "simrat39/rust-tools.nvim",
     config = function()
