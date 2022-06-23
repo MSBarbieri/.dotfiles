@@ -8,7 +8,10 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun
+	rofi -show drun -config ~/.config/rofi/awel.rasi
+
+super + Tab
+  rofi  -show window -config ~/.config/rofi/awel.rasi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -71,7 +74,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
+super + {grave}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
@@ -122,10 +125,26 @@ super + {Left,Down,Up,Right}
 
 # search shertcut
 super + x
-  rofi -lines 10 -padding 0 -show search -modi search:$HOME/.local/scripts/rofi-search -i -p "Search: "
+  rofi -config ~/.config/rofi/awel.rasi -lines 10 -padding 0 -show search -modi search:$HOME/.local/scripts/rofi-search -i -p "Search: " 
 
 # keyboard layout
 super + F10
   setxkbmap -layout us -variant dvp -option "caps:swapescape"
 super + F11
   setxkbmap -layout us -option "caps:swapescape"
+
+
+XF86Audio{Prev,Next}
+  playerctl {previous,next} -p spotify
+
+XF86AudioPlay 
+  playerctl play-pause -p spotify
+
+XF86AudioRaiseVolume
+  pactl set-sink-volume @DEFAULT_SINK@ +10% 
+
+XF86AudioLowerVolume 
+  pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioMute 
+  pactl set-sink-mute @DEFAULT_SINK@ toggle

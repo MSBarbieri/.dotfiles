@@ -16,8 +16,12 @@ lvim.plugins = {
           on_attach = require("lvim.lsp").common_on_attach,
           on_init = require("lvim.lsp").common_on_init,
         },
-        })
+      })
     end,
     ft = { "rust", "rs" },
   },
 }
+
+local dap_install = require "dap-install"
+
+dap_install.config("ccppr_vsc", {})
