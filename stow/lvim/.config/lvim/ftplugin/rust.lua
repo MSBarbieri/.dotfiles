@@ -1,27 +1,13 @@
-vim.list_extend(lvim.lsp.override, { "rust_analyzer" })
-lvim.plugins = {
+local dap = require('dap')
+dap.configurations.rust = {
   {
-    "simrat39/rust-tools.nvim",
-    config = function()
-      require("rust-tools").setup({
-        tools = {
-          autoSetHints = true,
-          hover_with_actions = true,
-          runnables = {
-            use_telescope = true,
-          },
-        },
-        server = {
-          cmd = { vim.fn.stdpath "data" .. "/lsp_servers/rust/rust-analyzer" },
-          on_attach = require("lvim.lsp").common_on_attach,
-          on_init = require("lvim.lsp").common_on_init,
-        },
-      })
+    name = "Launch file",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
-    ft = { "rust", "rs" },
+    cwd = '${workspaceFolder}',
+    stopOnEntry = true,
   },
 }
-
-local dap_install = require "dap-install"
-
-dap_install.config("ccppr_vsc", {})

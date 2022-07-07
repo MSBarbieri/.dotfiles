@@ -47,7 +47,7 @@ bindsym XF86AudioPrev exec playerctl previous -p spotify
 floating_modifier $mod
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+comma kill
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -192,7 +192,6 @@ bindsym $mod+r mode "resize"
 # change caps to escape
 exec setxkbmap -layout us -variant dvp -option "caps:swapescape,grp:sclk_toggle"
 exec --no-startup-id $HOME/.local/scripts/start_picom
-exec --no-startup-id $HOME/.local/scripts/start_bar 
 exec --no-startup-id $HOME/.local/scripts/background
 
 bindsym $mod+space exec --no-startup-id rofi -show drun
@@ -207,16 +206,11 @@ bindsym $mod+Return exec alacritty -e $HOME/.local/bin/tmux-sessionizer $HOME
 bindsym $mod+F10 exec setxkbmap -layout us -variant dvp -option "caps:swapescape"
 bindsym $mod+F11 exec setxkbmap -layout us -option "caps:swapescape"
 
-#************  Gaps  *******************************
-
-gaps outer 5
-gaps inner 0
-
 #************  Other settings  *********************
 
 # Set per-application border
 for_window [class=".*"] border pixel 1
-for_window [class=".*"] floating enable
+# for_window [class=".*"] floating enable
 
 # Enable or disable floating
 # for_window [class="Lxappearance"] floating enable
