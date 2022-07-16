@@ -110,6 +110,14 @@ source $HOME/.zsh_profile
 
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/home/fumassa/.rd/bin:$PATH"
+export PATH="/home/matheus-barbieri/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-. "/home/matheusbarbieri/.wasmedge/env"
+. "/home/matheus-barbieri/.wasmedge/env"
+
+# Wasmer
+export WASMER_DIR="/home/matheus-barbieri/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"

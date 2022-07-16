@@ -11,7 +11,7 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.lsp.automatic_servers_installation = true
-lvim.builtin.lualine.style = "lvim"
+-- lvim.builtin.lualine.style = "lvim"
 lvim.builtin.dap.active = true
 lvim.transparent_window = true
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -88,17 +88,7 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 
 -- dap config
 ---------------------------------------------------------------------------------------------
-local dap, dapui = require('dap'), require('dapui')
-dapui.setup()
-dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
-end
+local dap = require('dap')
 
 dap.adapters.node2 = {
   type = 'executable',
@@ -175,7 +165,6 @@ end
 
 -- generic LSP settings
 -- Additional Plugins
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "rust_analyzer" })
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
   { "ThePrimeagen/git-worktree.nvim" },
@@ -217,8 +206,23 @@ lvim.plugins = {
 
 -- integrating extensions
 require("telescope").load_extension("git_worktree")
+local dapui = require("dapui")
+dapui.setup()
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
 
 -- colorscheme
+vim.g.tokyonight_style = "storm"
 lvim.colorscheme = "tokyonight"
+lvim.builtin.lualine.options.theme = "tokyonight"
+lvim.builtin.lualine.style = "lvim"
 lvim.builtin.gitsigns.opts.numhl = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
+vim.wo.colorcolumn = "80,100"
