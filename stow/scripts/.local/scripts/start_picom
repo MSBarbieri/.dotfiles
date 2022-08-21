@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+killall -q picom 
+
+
+while pgrep -x picom >/dev/null; do sleep 2; done
+
+picom --config=$HOME/.config/picom/picom.conf --experimental-backends 2> /dev/null &
+
