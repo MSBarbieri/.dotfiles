@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 alias vim="lvim"
-alias nvim="lvim"
 alias vi="lvim"
 alias ls="exa --icons"
 alias bat="bat --color=auto"
