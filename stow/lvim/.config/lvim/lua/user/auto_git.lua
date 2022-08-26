@@ -1,20 +1,20 @@
 -- auto commit on save file
-lvim.autocommands = {
-  {
-    "BufWritePost",
-    {
-      pattern = { "*" },
-      command = "silent !git add -A &> /dev/null; git commit -m \"$(date)\" &> /dev/null"
-    }
-  },
-  {
-    "VimLeave",
-    {
-      pattern = { "*" },
-      command = "silent !git push"
-    }
-  }
-}
+-- lvim.autocommands = {
+--   {
+--     "BufWritePost",
+--     {
+--       pattern = { "*" },
+--       command = "silent !git add -A &> /dev/null; git commit -m \"$(date)\" &> /dev/null"
+--     }
+--   },
+--   {
+--     "VimLeave",
+--     {
+--       pattern = { "*" },
+--       command = "silent !git push"
+--     }
+--   }
+-- }
 
 
 -- create new branch on save and move worktree if exists
