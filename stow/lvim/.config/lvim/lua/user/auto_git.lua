@@ -11,7 +11,7 @@ lvim.autocommands = {
     "VimLeave",
     {
       pattern = { "*" },
-      command = "silent !git push -u origin main"
+      command = "silent !git push"
     }
   }
 }
