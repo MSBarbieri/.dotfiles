@@ -1,0 +1,6 @@
+lvim.keys.normal_mode["<Space>-"] = ":split<cr>"
+lvim.keys.normal_mode["<Space>_"] = ":vsplit<cr>"
+lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<Space>gt"] = ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>"
+lvim.keys.normal_mode["<Space>ga"] = ":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>"
+lvim.keys.normal_mode["<Space>da"] = ":lua require('dapui').toggle()<CR>"
