@@ -18,5 +18,5 @@
 
 
 -- create new branch on save and move worktree if exists
-local worktree_command = vim.cmd("!git worktree list | awk 'NR==1 {print $2}'")
+local worktree_command = vim.cmd("r !git worktree list | awk 'NR==1 {print $2}'")
 vim.pretty_print(worktree_command)
