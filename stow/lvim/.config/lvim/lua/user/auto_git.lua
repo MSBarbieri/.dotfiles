@@ -6,6 +6,13 @@ lvim.autocommands = {
       pattern = { "*" },
       command = "silent !git add -A &> /dev/null; git commit -m \"$(date)\" &> /dev/null"
     }
+  },
+  {
+    "VimLeave",
+    {
+      pattern = { "*" },
+      command = "!echo works modafucka > ~/foo-1"
+    }
   }
 }
 
