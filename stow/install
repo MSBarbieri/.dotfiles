@@ -1,4 +1,4 @@
 #!/bin/bash
 stow -vt ~ alacritty fonts git i3 local lvim picom rofi tmux \
-    wallpapers zsh polybar dunst scripts x11 rust github \
-    bspwm
+    wallpapers zsh dunst scripts x11 rust github \
+    audio

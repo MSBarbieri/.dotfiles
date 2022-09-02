@@ -204,9 +204,10 @@ bindsym $mod+b exec --no-startup-id brave-browser
 bindsym --release $mod+x exec --no-startup-id rofi -lines 10 -padding 0 -show search -modi search:$HOME/.local/scripts/rofi-search -i -p "Search: "
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty -e $HOME/.local/bin/tmux-sessionizer $HOME
+
 bindsym $mod+Pause exec shutdown now  
-bindsym $mod+Shift+Return exec alacritty -e $HOME/.local/bin/tmux-sessionizer $HOME
+bindsym $mod+Shift+Return exec alacritty
 bindsym $mod+F10 exec setxkbmap -layout us -variant dvp -option "caps:swapescape"
 bindsym $mod+F11 exec setxkbmap -layout us -option "caps:swapescape"
 

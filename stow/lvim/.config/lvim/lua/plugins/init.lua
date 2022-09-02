@@ -22,5 +22,7 @@ lvim.plugins = {
     require("focus").setup()
   end
   },
-  { 'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" } }
+  { 'scalameta/nvim-metals', requires = { "nvim-lua/plenary.nvim" } },
+  { 'chrisbra/unicode.vim' },
+  { 'nvim-telescope/telescope-symbols.nvim' },
 }

@@ -1,9 +1,12 @@
 local M = {}
 
 M.load_rust_tools = function()
-  local dap_adapter = require('dap')
+  local extension_path = vim.env.HOME .. '/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/'
+  local codelldb_path = extension_path .. 'adapter/codelldb'
+  local liblldb_path = extension_path .. 'lldb/lib/liblldb.so'
   local lsp_installer_servers = require "nvim-lsp-installer.servers"
   local _, requested_server = lsp_installer_servers.get_server "rust_analyzer"
+
   require("rust-tools").setup({
     tools = {
       autoSetHints = true,
@@ -13,7 +16,7 @@ M.load_rust_tools = function()
       },
     },
     dap = {
-      adapter = dap_adapter.adapters.codelldb,
+      adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
     },
     server = {
       -- cmd = { vim.fn.stdpath "data" .. "/lsp_servers/rust/rust-analyzer" },
