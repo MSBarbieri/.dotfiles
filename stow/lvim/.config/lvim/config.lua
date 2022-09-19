@@ -8,5 +8,6 @@ an executable
 
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 -- general
+require "utils"
 require "plugins"
 require "user"

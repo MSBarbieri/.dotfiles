@@ -10,13 +10,6 @@ lvim.plugins = {
   { "wellle/context.vim" },
   { "dbeniamine/cheat.sh-vim" },
   { "rcarriga/nvim-dap-ui" },
-  {
-    "simrat39/rust-tools.nvim",
-    config = function()
-      require("plugins.rust").load_rust_tools()
-    end,
-    ft = { "rust", "rs" },
-  },
   { "beauwilliams/focus.nvim", config =
   function()
     require("focus").setup()

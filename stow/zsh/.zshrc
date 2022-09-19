@@ -70,7 +70,7 @@ ZSH_THEME="lukerandall"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git dotenv vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,8 +103,6 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.zsh_profile
 
-
 . "$HOME/.cargo/env"
 . "$HOME/.envs"
 . "$HOME/.aliases"
-

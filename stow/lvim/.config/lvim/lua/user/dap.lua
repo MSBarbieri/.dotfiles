@@ -8,11 +8,11 @@ dap.adapters.node2 = {
   args = { os.getenv('HOME') .. '/dev/dap/vscode-node-debug2/out/src/nodeDebug.js' },
 }
 
-dap.adapters.coreclr = {
-  type = 'executable',
-  command = os.getenv('HOME') .. '/dev/dap/netcoredbg/netcoredbg',
-  args = { '--interpreter=vscode' }
-}
+-- dap.adapters.coreclr = {
+--   type = 'executable',
+--   command = os.getenv('HOME') .. '/dev/dap/netcoredbg/netcoredbg',
+--   args = { '--interpreter=vscode' }
+-- }
 
 dap.adapters.chrome = {
   type = "executable",

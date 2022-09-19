@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export ZVM_VI_EDITOR="lvim"
+export EDITOR="lvim"
 export BROWSER="brave-browser"
 export GOPATH=$HOME/programming_languages/go/
 
