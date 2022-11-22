@@ -70,7 +70,7 @@ ZSH_THEME="lukerandall"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dotenv vi-mode)
+plugins=(git dotenv vi-mode poetry)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-source $HOME/.zsh_profile
+source $HOME/.local/profile/profile
 
 . "$HOME/.cargo/env"
-. "$HOME/.envs"
-. "$HOME/.aliases"
+. "$HOME/.local/profile/envs"
+. "$HOME/.local/profile/aliases"
+export PATH=$PATH:/home/matheus-barbieri/.spicetify

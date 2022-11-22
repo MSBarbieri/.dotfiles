@@ -119,28 +119,28 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+bindsym $mod+ampersand workspace number $ws1
+bindsym $mod+bracketleft workspace number $ws2
+bindsym $mod+braceleft workspace number $ws3
+bindsym $mod+braceright workspace number $ws4
+bindsym $mod+parenleft workspace number $ws5
+bindsym $mod+equal workspace number $ws6
+bindsym $mod+asterisk workspace number $ws7
+bindsym $mod+parenright workspace number $ws8
+bindsym $mod+plus workspace number $ws9
+bindsym $mod+bracketright workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+ampersand move container to workspace number $ws1
+bindsym $mod+Shift+bracketleft move container to workspace number $ws2
+bindsym $mod+Shift+braceleft move container to workspace number $ws3
+bindsym $mod+Shift+braceright move container to workspace number $ws4
+bindsym $mod+Shift+parenleft move container to workspace number $ws5
+bindsym $mod+Shift+equal move container to workspace number $ws6
+bindsym $mod+Shift+asterisk move container to workspace number $ws7
+bindsym $mod+Shift+parenright move container to workspace number $ws8
+bindsym $mod+Shift+plus move container to workspace number $ws9
+bindsym $mod+Shift+bracketright move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -162,7 +162,7 @@ mode "resize" {
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
-        bindsym u resize set height 1080 px 
+        bindsym u resize set width 1920 px 
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -193,21 +193,20 @@ bindsym $mod+r mode "resize"
 # change caps to escape
 exec setxkbmap -layout us -variant dvp -option "caps:swapescape,grp:sclk_toggle"
 exec --no-startup-id $HOME/.local/scripts/start_picom
-exec --no-startup-id pulsemeeter init
-exec --no-startup-id $HOME/.local/scripts/background
+# exec --no-startup-id pulsemeeter init
+# exec --no-startup-id $HOME/.local/scripts/background
 
 bindsym $mod+space exec --no-startup-id rofi -show drun
 
 #************  Apps Shortcut ***********************
 # start browser
-bindsym $mod+b exec --no-startup-id brave-browser
+bindsym $mod+b exec --no-startup-id brave
 bindsym --release $mod+x exec --no-startup-id rofi -lines 10 -padding 0 -show search -modi search:$HOME/.local/scripts/rofi-search -i -p "Search: "
 
 # start a terminal
-bindsym $mod+Return exec alacritty -e $HOME/.local/bin/tmux-sessionizer $HOME
+bindsym $mod+Return exec kitty
 
 bindsym $mod+Pause exec shutdown now  
-bindsym $mod+Shift+Return exec alacritty
 bindsym $mod+F10 exec setxkbmap -layout us -variant dvp -option "caps:swapescape"
 bindsym $mod+F11 exec setxkbmap -layout us -option "caps:swapescape"
 

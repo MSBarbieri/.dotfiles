@@ -2,8 +2,12 @@
 
 export ZVM_VI_EDITOR="lvim"
 export EDITOR="lvim"
-export BROWSER="brave-browser"
+export BROWSER="brave"
 export GOPATH=$HOME/programming_languages/go/
+
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # PATHS
 addToPath $HOME/.local/bin
@@ -11,6 +15,8 @@ addToPath $HOME/.local/scripts/
 addToPath $HOME/programming_languages/go/bin
 addToPath /usr/local/go/bin
 addToPath $HOME/.rd/bin
+addToPath $HOME/.spicetify/
+addToPath $HOME/.emacs.d/bin/
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
