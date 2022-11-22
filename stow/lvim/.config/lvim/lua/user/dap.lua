@@ -2,23 +2,24 @@
 ---------------------------------------------------------------------------------------------
 local dap = require('dap')
 
-dap.adapters.node2 = {
-  type = 'executable',
-  command = 'node',
-  args = { os.getenv('HOME') .. '/dev/dap/vscode-node-debug2/out/src/nodeDebug.js' },
+dap.configurations.python = {
+  {
+    type = 'python',
+    request = 'launch',
+    name = "Launch file",
+    program = "${file}",
+    pythonPath = function()
+      return os.getenv("HOME") .. '/.pyenv/shims/python3'
+    end
+  },
 }
 
--- dap.adapters.coreclr = {
---   type = 'executable',
---   command = os.getenv('HOME') .. '/dev/dap/netcoredbg/netcoredbg',
---   args = { '--interpreter=vscode' }
--- }
-
-dap.adapters.chrome = {
-  type = "executable",
-  command = "node",
-  args = { os.getenv("HOME") .. "/dev/dap/vscode-chrome-debug/out/src/chromeDebug.js" } -- TODO adjust
+dap.adapters.python = {
+  type = 'executable';
+  command = os.getenv("HOME") .. '/.pyenv/shims/python3';
+  args = { '-m', 'debugpy.adapter' }; -- or { '-m', 'debugpy.adapter' }
 }
+
 -- daput
 local dapui = require("dapui")
 dapui.setup()

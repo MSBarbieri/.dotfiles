@@ -1,15 +1,16 @@
 -- generic LSP settings
 -- Additional Plugins
 lvim.plugins = {
-  { "folke/tokyonight.nvim" },
+  { "shaunsingh/nord.nvim" },
   { "ThePrimeagen/git-worktree.nvim" },
+  { "danilamihailov/beacon.nvim" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
   { "wellle/context.vim" },
   { "dbeniamine/cheat.sh-vim" },
-  { "rcarriga/nvim-dap-ui" },
+  -- { "rcarriga/nvim-dap-ui" },
   { "beauwilliams/focus.nvim", config =
   function()
     require("focus").setup()
