@@ -2,7 +2,7 @@
 
 export ZVM_VI_EDITOR="lvim"
 export EDITOR="lvim"
-export BROWSER="brave"
+export BROWSER="brave-browser"
 export GOPATH=$HOME/programming_languages/go/
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk/

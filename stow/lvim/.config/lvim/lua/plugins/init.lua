@@ -3,6 +3,7 @@
 lvim.plugins = {
   { "shaunsingh/nord.nvim" },
   { "ThePrimeagen/git-worktree.nvim" },
+  { "ThePrimeagen/harpoon" },
   { "danilamihailov/beacon.nvim" },
   {
     "folke/trouble.nvim",
