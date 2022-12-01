@@ -1,3 +1,8 @@
 #!/bin/bash
 stow -vt ~ alacritty fonts git i3 local lvim picom tmux \
-    wallpapers zsh dunst scripts rust github
+    wallpapers zsh dunst scripts rust
+
+path=$(pwd)
+sudo ln -fs "$path/keyboard/default/keyboard" /etc/default/keyboard
+sudo ln -fs "$path/keyboard/symbols/us" /usr/share/X11/xkb/symbols/us
+
