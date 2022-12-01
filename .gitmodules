@@ -1,3 +1,0 @@
-[submodule "stow/rofi/.config/rofi"]
-	path = stow/rofi/.config/rofi
-	url = https://github.com/MSBarbieri/Rofi-scripts
