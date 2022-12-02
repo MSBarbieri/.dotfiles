@@ -1,4 +1,3 @@
-
-XKBLAYOUT="dvp"
+XKBLAYOUT="us"
 XKBVARIANT="dvp"
-XKBOPTIONS="caps:swapescape,grp:alt_shift_toggle"
+XKBOPTIONS="caps:swapescape"
