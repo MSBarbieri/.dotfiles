@@ -30,7 +30,7 @@ else
         killall -q "xwinwrap"
         while pgrep -u $UID -x xwinwrap >/dev/null; do sleep 1; done
         # You may need to edit the resolution below for your display configuration.
-        xwinwrap -fs -ov -r -b -ni -s -nf -un -argb -- mpv --fullscreen --no-stop-screensaver --loop --no-audio --no-border --no-osc --no-osd-bar --no-input-default-bindings --video-aspect-override='21:9' -wid WID "$selected" > /dev/null 2>&1 &
+        xwinwrap -fs -ov -r -b -ni -s -nf -un -argb -- mpv --fullscreen --no-stop-screensaver --loop --no-audio --no-border --no-osc --no-osd-bar --no-input-default-bindings --video-aspect-override='21.3:9' -wid WID "$selected" > /dev/null 2>&1 &
     fi
 fi
 
