@@ -1,0 +1,36 @@
+#!/bin/env bash
+#
+# Animated wallpaper script.
+# Credits: https://www.youtube.com/channel/UCngn7SVujlvskHRvRKc1cTw
+# Dependencies: rofi, mpv, xwinwrap-baitinq-git, exa
+#
+#set -euo pipefail
+
+# !Hack! Rofi don't like being launched inside rofi, so kill the last rofi before running this scipt which loads rofi! phew!
+# kill "$(pgrep rofi)"
+
+# Path to animated wallpaper video files
+wallpath="$HOME/Videos/Live_Wallpapers/"
+# Find videos folder
+if [[ ! -d "$wallpath" ]]; then
+    # If the videos folder doesn't exist - inform the user.
+    echo " [ERROR] Animated Wallpaper Error:" "Folder \"$wallpath\" does not exists." >> /tmp/wallpaper.log
+    exit 1
+else
+    # cd to the video path
+    cd "$wallpath" || exit 1
+    # Use rofi to present a list of animated wallpaper files. The selected file will be used as the animated wallpaper.
+    selected="$HOME/Videos/Live_Wallpapers/wallpaper"
+    if [[ -z "$selected" ]]; then
+        echo  "[ERROR] Nothing selected" >> /tmp/wallpaper.log
+        exit 1
+    else
+        echo "[DEBUG] Selected: \"$selected\"" >> /tmp/wallpaper.log
+        # Is xwinwrap already running? Kill it.
+        killall -q "xwinwrap"
+        while pgrep -u $UID -x xwinwrap >/dev/null; do sleep 1; done
+        # You may need to edit the resolution below for your display configuration.
+        xwinwrap -fs -ov -r -b -ni -s -nf -un -argb -- mpv --fullscreen --no-stop-screensaver --loop --no-audio --no-border --no-osc --no-osd-bar --no-input-default-bindings --video-aspect-override='21:9' -wid WID "$selected" > /dev/null 2>&1 &
+    fi
+fi
+
