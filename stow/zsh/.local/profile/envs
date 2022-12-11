@@ -8,15 +8,17 @@ export GOPATH=$HOME/dev/go/
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export REPOS=$HOME/dev/repos/MSBarbieri
+export ZK_NOTEBOOK_DIR=$REPOS/zk_notes
 
 # PATHS
 addToPath $HOME/.local/bin
-addToPath $HOME/.local/scripts/
+addToPath $HOME/.local/scripts
 addToPath $HOME/dev/go/bin
 addToPath /usr/local/go/bin
 addToPath $HOME/.rd/bin
-addToPath $HOME/.spicetify/
-addToPath $HOME/.emacs.d/bin/
+addToPath $HOME/.spicetify
+addToPath $HOME/.emacs.d/bin
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
