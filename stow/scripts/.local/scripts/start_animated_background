@@ -11,6 +11,7 @@
 
 # Path to animated wallpaper video files
 wallpath="$HOME/Videos/Live_Wallpapers/"
+
 # Find videos folder
 if [[ ! -d "$wallpath" ]]; then
     # If the videos folder doesn't exist - inform the user.
@@ -29,8 +30,12 @@ else
         # Is xwinwrap already running? Kill it.
         killall -q "xwinwrap"
         while pgrep -u $UID -x xwinwrap >/dev/null; do sleep 1; done
-        # You may need to edit the resolution below for your display configuration.
-        xwinwrap -fs -ov -r -b -ni -s -nf -un -argb -- mpv --fullscreen --no-stop-screensaver --loop --no-audio --no-border --no-osc --no-osd-bar --no-input-default-bindings --video-aspect-override='21.3:9' -wid WID "$selected" > /dev/null 2>&1 &
+        if [[ "$1" == "stream" ]]; then
+          # You may need to edit the resolution below for your display configuration.
+          xwinwrap -g 1920x1080+640+0 -ov -r -b -ni -s -nf -un -argb -- mpv --fullscreen --no-stop-screensaver --loop --no-audio --no-border --no-osc --no-osd-bar --no-input-default-bindings -wid WID "$selected" > /dev/null 2>&1 &
+        else 
+          xwinwrap -fs -ov -r -b -ni -s -nf -un -argb -- mpv --fullscreen --no-stop-screensaver --loop --no-audio --no-border --no-osc --no-osd-bar --no-input-default-bindings --video-aspect-override='21.3:9' -wid WID "$selected" > /dev/null 2>&1 &
+        fi
     fi
 fi
 
