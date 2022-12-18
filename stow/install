@@ -1,6 +1,6 @@
 #!/bin/bash
 stow -vt ~ alacritty fonts git i3 local lvim picom tmux \
-    wallpapers zsh dunst scripts rust kitty
+    wallpapers zsh dunst scripts rust kitty taskwarrior
 
 path=$(pwd)
 sudo cp -f "$path/keyboard/default/keyboard" /etc/default/keyboard

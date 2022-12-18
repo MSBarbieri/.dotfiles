@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 
-alias vim="lvim"
-alias vi="lvim"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
 alias ls="exa --icons"
 alias bat="bat --color=auto"
 alias cat="bat"
@@ -15,3 +16,4 @@ alias rotate="xrandr --output HDMI-0 --mode 2560x1080 --rotate"
 alias dotfiles="cd ~/dev/repos/MSBarbieri/.dotfiles/"
 alias msb="cd ~/dev/repos/MSBarbieri/"
 alias zkd="cd $ZK_NOTEBOOK_DIR"
+alias taskd_init="TASKDDATA=\"/var/taskd\" \"/usr/local/bin/taskdctl\" start"

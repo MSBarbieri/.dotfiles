@@ -5,7 +5,10 @@ t = "test"
 r = "run"
 br = "build --release"
 rr = "run --release"
-w = "watch -x clippy -x test"
+w = "watch -x test"
 
 [doc]
 browser = "brave-browser"
+
+[test]
+jobs = 4
