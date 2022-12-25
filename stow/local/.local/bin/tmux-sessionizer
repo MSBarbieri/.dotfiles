@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/.config ~/dev ~/dev/repos ~/dev/repos/MSBarbieri/ ~/AndroidStudioProjects/ -mindepth 0 -maxdepth 3 -type d -exec test -e '{}/.git' ';' -print -prune | fzf)
+    selected=$(find ~/.config ~/dev ~/dev/repos ~/dev/repos/MSBarbieri -mindepth 0 -maxdepth 1 -type d -exec test -e '{}/.git' ';' -print -prune | fzf)
 fi
 
 if [[ -z $selected ]]; then
