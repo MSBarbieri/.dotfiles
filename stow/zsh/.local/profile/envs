@@ -1,13 +1,9 @@
 #!/usr/bin/env zsh
 
-export ZVM_VI_EDITOR="lvim"
-export EDITOR="lvim"
+export ZVM_VI_EDITOR="nvim"
+export EDITOR="nvim"
 export BROWSER="brave-browser"
-export GOPATH=$HOME/dev/go/
 
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export REPOS=$HOME/dev/repos/MSBarbieri
 export ZK_NOTEBOOK_DIR=$REPOS/zk_notes
 export TASKDDATA=/var/taskd
@@ -35,3 +31,10 @@ eval "$(pyenv virtualenv-init -)"
 
 # GHCUP
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+# SPOTIFY
+export PATH=$PATH:/home/matheus-barbieri/.spicetify
+export PATH=$PATH:/home/hefestus/.spicetify
+
+# DIRENV
+eval "$(direnv hook zsh)"

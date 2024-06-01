@@ -1,8 +1,7 @@
 #!/bin/bash
-stow -vt ~ alacritty fonts git i3 local lvim picom tmux \
-    wallpapers zsh dunst scripts rust kitty taskwarrior
+stow -vt ~ alacritty fonts git i3 "local" picom tmux \
+	wallpapers zsh dunst scripts kitty taskwarrior nix
 
-path=$(pwd)
-sudo cp -f "$path/keyboard/default/keyboard" /etc/default/keyboard
-sudo cp -f "$path/keyboard/symbols/us" /usr/share/X11/xkb/symbols/us
-
+fc-cache
+#sudo cp -f "$path/keyboard/default/keyboard" /etc/default/keyboard
+#sudo cp -f "$path/keyboard/symbols/us" /usr/share/X11/xkb/symbols/us

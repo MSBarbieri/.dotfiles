@@ -19,6 +19,9 @@
 [init]
   defaultBranch = main
 
+[branch]
+  authosetupmerge = true
+
 [alias]
   wa = worktree add
   wl = worktree list
