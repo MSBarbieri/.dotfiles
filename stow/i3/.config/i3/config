@@ -301,13 +301,15 @@ bindsym $mod+F10 exec setxkbmap -layout us -variant canary -option ""
 bindsym $mod+F11 exec setxkbmap -layout us -variant dvp -option "caps:swapescape"
 bindsym $mod+F12 exec setxkbmap -layout us -option ""
 
+
 #************  On Start  ***************************
 exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill $HOME/Pictures/wallpapers/wallpaper
-exec --no-startup-id DiscordCanary
+exec --no-startup-id discord-canary
 exec --no-startup-id whatsapp-for-linux
 exec --no-startup-id spotify
 exec --no-startup-id super-productivity
+exec --no-startup-id tmux new-session -d -s "hefestus"
 
 assign [class="discord"] $l_ws9 
 assign [class="Whatsapp-for-linux"] $l_ws9

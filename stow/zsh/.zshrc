@@ -107,4 +107,3 @@ source $ZSH/oh-my-zsh.sh
 . "$HOME/.local/profile/envs"
 . "$HOME/.local/profile/aliases"
 
-

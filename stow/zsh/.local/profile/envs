@@ -38,3 +38,25 @@ export PATH=$PATH:/home/hefestus/.spicetify
 
 # DIRENV
 eval "$(direnv hook zsh)"
+export DISABLE_AUTO_TITLE='true'
+
+# the fuck
+eval $(thefuck --alias)
+
+if [[ -z "$TMUX" ]] ;then                   # do not allow "tmux in tmux"
+    if [ -n "$SSH_CONNECTION" ]; then
+        echo "You are connected via SSH. internal tmux disabled"
+    else
+      ID="$( tmux ls | cut -d: -f1 | head -n 1 )"    # get the id of a deattached session
+      if [[ -z "$ID" ]] ;then                                 # if not available create a new one
+              tmux new-session -s "$(whoami)" -c "$HOME"
+      else
+              tmux attach-session -t "$ID"                    # if available, attach to it
+      fi
+    fi
+fi
+
+bindkey '^[[A' history-substring-search-up # or '\eOA'
+bindkey '^[[B' history-substring-search-down # or '\eOB'
+# bindkey '^[[A' history-substring-search-up
+# bindkey '^[[B' history-substring-search-down
