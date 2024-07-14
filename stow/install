@@ -1,6 +1,9 @@
 #!/bin/bash
+
+echo "linking all dotfiles in your enviroment"
+
 stow -vt ~ alacritty fonts git i3 "local" picom tmux \
-	wallpapers zsh dunst scripts kitty taskwarrior nix
+  wallpapers zsh dunst scripts kitty taskwarrior nix
 
 fc-cache
 #sudo cp -f "$path/keyboard/default/keyboard" /etc/default/keyboard
